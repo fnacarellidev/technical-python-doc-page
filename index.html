@@ -8,35 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Technical Docs Python</title>
 </head>
 <body>
     <div class="page-wrap">
         <nav id="navbar">
-            <header>Python Documentation</header>
-            <ul>
-                <li>
-                    <a href="#Introduction" class="nav-link">Introduction</a>
-                </li>
-                <li>
-                    <a href="#Why_Python" class="nav-link">Why Python</a>
-                </li>
-                <li>
-                    <a href="#Creating_Variables" class="nav-link">Creating Variables</a>
-                </li>
-                <li>
-                    <a href="#If...Else" class="nav-link">If... Else</a>
-                </li>
-                <li>
-                    <a href="#While_Loops" class="nav-link">While Loops</a>
-                </li>
-                <li>
-                    <a href="#For_Loops" class="nav-link">For Loops</a>
-                </li>
-                <li>
-                    <a href="#Functions" class="nav-link">Functions</a>
-                </li>
-            </ul>
+            <div class="navbar-content-wrap">
+                <header>Python Documentation</header>
+                <ul>
+                    <li>
+                        <a href="#Introduction" class="nav-link">Introduction</a>
+                    </li>
+                    <li>
+                        <a href="#Why_Python" class="nav-link">Why Python</a>
+                    </li>
+                    <li>
+                        <a href="#Creating_Variables" class="nav-link">Creating Variables</a>
+                    </li>
+                    <li>
+                        <a href="#If...Else" class="nav-link">If... Else</a>
+                    </li>
+                    <li>
+                        <a href="#While_Loops" class="nav-link">While Loops</a>
+                    </li>
+                    <li>
+                        <a href="#For_Loops" class="nav-link">For Loops</a>
+                    </li>
+                    <li>
+                        <a href="#Functions" class="nav-link">Functions</a>
+                    </li>
+                </ul>
+            </div>
         </nav>  
         <main id="main-doc">
             <section class="main-section" id="Introduction">
@@ -93,6 +95,34 @@
             </section>
             <section class="main-section" id="If...Else">
                 <header>If... Else</header>
+                <h2>Python Conditions and If statements</h2>
+                <p>Python supports the usual logical conditions from mathematics: </p>
+                <ul>
+                    <li>Equals: <code>a == b </code></li>
+                    <li>Not Equals: <code>a != b </code></li>
+                    <li>Less than: <code>a &lt; b </code></li>
+                    <li>Less than or equal to: <code>a &lt;= b </code></li>
+                    <li>Greater than: <code>a &gt; b </code></li>
+                    <li>Greater than or equal to: <code>a &gt;= b </code></li>
+                </ul>
+                <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
+
+                <code>
+                    a = 33 <br>
+                    b = 200 <br>
+                    if b &gt; a: <br>
+                    &nbsp; &nbsp; &nbsp; &nbsp;print("b is greater than a")
+                </code>
+
+                <p>
+                    In this example we use two variables, <span class="highlight">a</span> 
+                    and <span class="highlight">b</span>, which are used as part of the 
+                    if statement to test whether <span class="highlight">b</span> is greater 
+                    than <span class="highlight">a</span>. As <span class="highlight">a</span> is 
+                    <span class="highlight">33</span>, and <span class="highlight">b</span> is 
+                    <span class="highlight">200</span>, we know that 200 is greater than 33,
+                    and so we print to screen that "b is greater than a".
+                </p>
             </section>
             <section class="main-section" id="While_Loops">
                 <header>While Loops</header>
