@@ -24,10 +24,14 @@
 #navbar li {
     list-style-type: none;
     border-top: 1px solid black;
+    line-height: 70px;
 }
 
 #navbar ul {
     padding: 0;
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .nav-link {
