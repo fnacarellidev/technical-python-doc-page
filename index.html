@@ -26,7 +26,7 @@
                         <a href="#Creating_Variables" class="nav-link">Creating Variables</a>
                     </li>
                     <li>
-                        <a href="#If...Else" class="nav-link">If... Else</a>
+                        <a href="#If..._Else" class="nav-link">If... Else</a>
                     </li>
                     <li>
                         <a href="#While_Loops" class="nav-link">While Loops</a>
@@ -93,7 +93,7 @@
                     x = "Sally" #x is now of type str <br>
                 </code>
             </section>
-            <section class="main-section" id="If...Else">
+            <section class="main-section" id="If..._Else">
                 <header>If... Else</header>
                 <h2>Python Conditions and If statements</h2>
                 <p>Python supports the usual logical conditions from mathematics: </p>
@@ -111,7 +111,7 @@
                     a = 33 <br>
                     b = 200 <br>
                     if b &gt; a: <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp;print("b is greater than a")
+                    &nbsp;&nbsp;&nbsp;&nbsp;print("b is greater than a")
                 </code>
 
                 <p>
@@ -126,9 +126,60 @@
             </section>
             <section class="main-section" id="While_Loops">
                 <header>While Loops</header>
+                <p>
+                    With the <span class="highlight">while </span>loop we 
+                    can execute a set of statements as long as a condition is true.
+                </p>
+                <p>Print i as long as i is less than 6: </p>
+                <code>
+                    i = 1 <br>
+                    while i &lt; 6: <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print(i) <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;i += 1
+                </code>
+                <p>
+                    The <span class="highlight">while </span>loop
+                    requires relevant variables to be ready, in this
+                    example we need to define an indexing variable,
+                    <span class="highlight">i </span>, which we set to 1.
+                </p>
             </section>
             <section class="main-section" id="For_Loops">
                 <header>For Loops</header>
+                <p>
+                    A <span class="highlight">for </span>loop is used
+                    for iterating over a sequence (that is either a list, 
+                    a tuple, a dictionary, a set or a string).
+                </p>
+                <p>
+                    This is less like the <span class="highlight"> for</span> keyword in other programming 
+                    languages, and works more like an iterator method as 
+                    found in other object-orientated programming languages.
+                </p>
+                <p>
+                    With the <span class="highlight">for </span>loop we can
+                    execute a set of statements, once for each item in a 
+                    list, tuple, set etc.
+                </p>
+                <code>
+                    fruits = ["apple", "banana", "cherry"] <br>
+                    for x in fruits: <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print(x)
+                </code>
+                <h2>The range() Function</h2>
+                <p>
+                    To loop through a set of code a specified number of times, 
+                    we can use the <span class="highlight"> range()</span> function.
+                </p>
+                <p>
+                    The <span class="highlight"> range()</span> function returns a sequence of numbers, 
+                    starting from 0 by default, and increments by 1 
+                    (by default), and ends at a specified number.
+                </p>
+                <code>
+                    for x in range(6): <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print(x)
+                </code>
             </section>
             <section class="main-section" id="Functions">
                 <header>Functions</header>
