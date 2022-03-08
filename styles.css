@@ -1,15 +1,25 @@
 * {
-    font-family: "Poppins", sans-serif;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Poppins", sans-serif; /* Had to transfer font to body because it was affecting HTML Code tag */
+    overflow-x: hidden;
+}
+
 .page-wrap {
     display: flex;
+    height: 100%;
+}
+
+.navbar-content-wrap {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 #navbar {
-    height: 100vh;
     width: 380px;
     border-right: 3px solid grey;
 }
@@ -24,6 +34,8 @@
 #navbar li {
     list-style-type: none;
     border-top: 1px solid black;
+    border-left: none;
+    border-right: none;
     line-height: 70px;
 }
 
@@ -40,4 +52,73 @@
     font-weight: 300;
     margin-left: 25px;
     font-size: 18px;
+}
+
+#main-doc {
+    padding: 20px 30px;
+}
+
+.main-section header {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.main-section h2 {
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.main-section p, .main-section li {
+    font-size: 0.9em;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-size: 1em;
+    color: crimson;
+}
+
+.footer {
+    padding: 20px 30px;
+}
+
+.footer header {
+    font-size: 36px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #7FFF00;
+}
+
+@media (max-width: 830px)
+{
+    .navbar-content-wrap {
+        position: static;
+    }
+
+    #navbar {
+        width: 100%;
+        border: none;
+    }
+
+    #navbar li {
+        line-height: 50px;
+        text-align: center;
+    }
+
+    #navbar ul {
+        max-height: 200px;
+    }
+
+    .page-wrap {
+        display: block;
+    }
+
+    .ul-content-wrapper {
+        border: 2px solid black;
+    }
 }
