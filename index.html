@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
     <title>Technical Docs Python</title>
 </head>
 <body>
@@ -41,171 +41,187 @@
                     </ul>
                 </div>
             </div>
-        </nav>  
-        <main id="main-doc">
-            <section class="main-section" id="Introduction">
-                <header>Introduction</header>
-
-                <h2>What can Python do?</h2>
+        </nav>
+        <div class="main-content-wrap">
+            <main id="main-doc">
+                <section class="main-section" id="Introduction">
+                    <header>Introduction</header>
+    
+                    <h2>What can Python do?</h2>
+                    <ul class="margin-bottom">
+                        <li>Python can be used on a server to create <span class="highlight"> web applications.</span></li>
+                        <li>Python can be used alongside software to <span class="highlight"> create workflows.</span></li>
+                        <li>Python can connect to database systems. It can also <span class="highlight"> read and modify files.</span></li>
+                        <li>Python can be used to <span class="highlight"> handle big data and perform complex mathematics.</span></li>
+                        <li>Python can be used for <span class="highlight"> rapid prototyping, or for production-ready software development.</span></li>
+                    </ul>
+    
+                    <p class="margin-bottom">Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
+                    <p>It is used for:</p>
+                    <ul>
+                        <li>web development (server-side),</li>
+                        <li>software development,</li>
+                        <li>mathematics,</li>
+                        <li>system scripting.</li>
+                    </ul>
+                </section>
+                <section class="main-section" id="Why_Python">
+                    <header>Why Python</header>
+                    <ul>
+                        <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+                        <li>Python has a simple syntax similar to the English language.</li>
+                        <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</li>
+                        <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
+                        <li>Python can be treated in a procedural way, an object-oriented way or a functional way.</li>
+                    </ul>
+                </section>
+                <section class="main-section" id="Creating_Variables">
+                    <header>Creating Variables</header>
+                    <h2>Variables</h2>
+                    <p class="margin-bottom">Variables are containers for storing data values.</p>
+    
+                    <h2>Creating a Variable</h2>
+                    <p>Python has no command for declaring a variable.</p>
+                    <p>A variable is created the moment you first assign a value to it.</p>
+    
+                    <div class="margin-bottom">
+                        <code>
+                            x -= 5 <br>
+                            y = "John"
+                        </code>
+                    </div>
+    
+                    <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+    
+                    <code>
+                        x = 4  # x is of type int <br>
+                        x = "Sally" #x is now of type str <br>
+                    </code>
+                </section>
+                <section class="main-section" id="If..._Else">
+                    <header>If... Else</header>
+                    <h2>Python Conditions and If statements</h2>
+                    <p>Python supports the usual logical conditions from mathematics: </p>
+                    <ul class="margin-bottom">
+                        <li>Equals: <code>a == b </code></li>
+                        <li>Not Equals: <code>a != b </code></li>
+                        <li>Less than: <code>a &lt; b </code></li>
+                        <li>Less than or equal to: <code>a &lt;= b </code></li>
+                        <li>Greater than: <code>a &gt; b </code></li>
+                        <li>Greater than or equal to: <code>a &gt;= b </code></li>
+                    </ul>
+                    <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
+    
+                    <div class="margin-bottom">
+                        <code>
+                            a = 33 <br>
+                            b = 200 <br>
+                            if b &gt; a: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("b is greater than a")
+                        </code>
+                    </div>
+    
+                    <p>
+                        In this example we use two variables, <span class="highlight">a</span> 
+                        and <span class="highlight">b</span>, which are used as part of the 
+                        if statement to test whether <span class="highlight">b</span> is greater 
+                        than <span class="highlight">a</span>. As <span class="highlight">a</span> is 
+                        <span class="highlight">33</span>, and <span class="highlight">b</span> is 
+                        <span class="highlight">200</span>, we know that 200 is greater than 33,
+                        and so we print to screen that "b is greater than a".
+                    </p>
+                </section>
+                <section class="main-section" id="While_Loops">
+                    <header>While Loops</header>
+                    <p>
+                        With the <span class="highlight">while </span>loop we 
+                        can execute a set of statements as long as a condition is true.
+                    </p>
+                    <p>Print i as long as i is less than 6: </p>
+                    <div class="margin-bottom">
+                        <code>
+                            i = 1 <br>
+                            while i &lt; 6: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print(i) <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;i += 1
+                        </code>
+                    </div>
+                    <p>
+                        The <span class="highlight">while </span>loop
+                        requires relevant variables to be ready, in this
+                        example we need to define an indexing variable,
+                        <span class="highlight">i </span>, which we set to 1.
+                    </p>
+                </section>
+                <section class="main-section" id="For_Loops">
+                    <header>For Loops</header>
+                    <p>
+                        A <span class="highlight">for </span>loop is used
+                        for iterating over a sequence (that is either a list, 
+                        a tuple, a dictionary, a set or a string).
+                    </p>
+                    <p>
+                        This is less like the <span class="highlight"> for</span> keyword in other programming 
+                        languages, and works more like an iterator method as 
+                        found in other object-orientated programming languages.
+                    </p>
+                    <p>
+                        With the <span class="highlight">for </span>loop we can
+                        execute a set of statements, once for each item in a 
+                        list, tuple, set etc.
+                    </p>
+                    <div class="margin-bottom">
+                        <code>
+                            fruits = ["apple", "banana", "cherry"] <br>
+                            for x in fruits: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print(x)
+                        </code>
+                    </div>
+                    <h2>The range() Function</h2>
+                    <p>
+                        To loop through a set of code a specified number of times, 
+                        we can use the <span class="highlight"> range()</span> function.
+                    </p>
+                    <p>
+                        The <span class="highlight"> range()</span> function returns a sequence of numbers, 
+                        starting from 0 by default, and increments by 1 
+                        (by default), and ends at a specified number.
+                    </p>
+                    <code>
+                        for x in range(6): <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print(x)
+                    </code>
+                </section>
+                <section class="main-section" id="Functions">
+                    <header>Functions</header>
+                    <p>
+                        A <span class="highlight">function</span> is a block of code
+                        which only runs when it is called.
+                    </p>
+                    <p>
+                        You can pass data, known as parameters, into a <span class="highlight"> function</span>.
+                    </p>
+                    <p>
+                        A <span class="highlight"> function</span> can return data as a result.
+                    </p>
+                    <h2>Creating a Function</h2>
+                    <p>
+                        In Python a fuinction is defined using the 
+                        <span class="highlight">def </span>keyword.
+                    </p>
+                    <code>
+                        def my_function(): <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Hello from a function")
+                    </code>
+                </section>
+            </main>
+            <footer class="footer">
+                <header>Reference</header>
                 <ul>
-                    <li>Python can be used on a server to create <span class="highlight"> web applications.</span></li>
-                    <li>Python can be used alongside software to <span class="highlight"> create workflows.</span></li>
-                    <li>Python can connect to database systems. It can also <span class="highlight"> read and modify files.</span></li>
-                    <li>Python can be used to <span class="highlight"> handle big data and perform complex mathematics.</span></li>
-                    <li>Python can be used for <span class="highlight"> rapid prototyping, or for production-ready software development.</span></li>
+                    <li>All the documentation in this page is taken from <a href="https://www.w3schools.com/python/default.asp">w3schools</a></li>
                 </ul>
-
-                <p>Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.</p>
-                <p>It is used for:</p>
-                <ul>
-                    <li>web development (server-side),</li>
-                    <li>software development,</li>
-                    <li>mathematics,</li>
-                    <li>system scripting.</li>
-                </ul>
-            </section>
-            <section class="main-section" id="Why_Python">
-                <header>Why Python</header>
-                <ul>
-                    <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
-                    <li>Python has a simple syntax similar to the English language.</li>
-                    <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</li>
-                    <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
-                    <li>Python can be treated in a procedural way, an object-oriented way or a functional way.</li>
-                </ul>
-            </section>
-            <section class="main-section" id="Creating_Variables">
-                <header>Creating Variables</header>
-                <h2>Variables</h2>
-                <p>Variables are containers for storing data values.</p>
-
-                <h2>Creating a Variable</h2>
-                <p>Python has no command for declaring a variable.</p>
-                <p>A variable is created the moment you first assign a value to it.</p>
-
-                <code>
-                    x -= 5 <br>
-                    y = "John"
-                </code>
-
-                <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
-
-                <code>
-                    x = 4  # x is of type int <br>
-                    x = "Sally" #x is now of type str <br>
-                </code>
-            </section>
-            <section class="main-section" id="If..._Else">
-                <header>If... Else</header>
-                <h2>Python Conditions and If statements</h2>
-                <p>Python supports the usual logical conditions from mathematics: </p>
-                <ul>
-                    <li>Equals: <code>a == b </code></li>
-                    <li>Not Equals: <code>a != b </code></li>
-                    <li>Less than: <code>a &lt; b </code></li>
-                    <li>Less than or equal to: <code>a &lt;= b </code></li>
-                    <li>Greater than: <code>a &gt; b </code></li>
-                    <li>Greater than or equal to: <code>a &gt;= b </code></li>
-                </ul>
-                <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
-
-                <code>
-                    a = 33 <br>
-                    b = 200 <br>
-                    if b &gt; a: <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print("b is greater than a")
-                </code>
-
-                <p>
-                    In this example we use two variables, <span class="highlight">a</span> 
-                    and <span class="highlight">b</span>, which are used as part of the 
-                    if statement to test whether <span class="highlight">b</span> is greater 
-                    than <span class="highlight">a</span>. As <span class="highlight">a</span> is 
-                    <span class="highlight">33</span>, and <span class="highlight">b</span> is 
-                    <span class="highlight">200</span>, we know that 200 is greater than 33,
-                    and so we print to screen that "b is greater than a".
-                </p>
-            </section>
-            <section class="main-section" id="While_Loops">
-                <header>While Loops</header>
-                <p>
-                    With the <span class="highlight">while </span>loop we 
-                    can execute a set of statements as long as a condition is true.
-                </p>
-                <p>Print i as long as i is less than 6: </p>
-                <code>
-                    i = 1 <br>
-                    while i &lt; 6: <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print(i) <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;i += 1
-                </code>
-                <p>
-                    The <span class="highlight">while </span>loop
-                    requires relevant variables to be ready, in this
-                    example we need to define an indexing variable,
-                    <span class="highlight">i </span>, which we set to 1.
-                </p>
-            </section>
-            <section class="main-section" id="For_Loops">
-                <header>For Loops</header>
-                <p>
-                    A <span class="highlight">for </span>loop is used
-                    for iterating over a sequence (that is either a list, 
-                    a tuple, a dictionary, a set or a string).
-                </p>
-                <p>
-                    This is less like the <span class="highlight"> for</span> keyword in other programming 
-                    languages, and works more like an iterator method as 
-                    found in other object-orientated programming languages.
-                </p>
-                <p>
-                    With the <span class="highlight">for </span>loop we can
-                    execute a set of statements, once for each item in a 
-                    list, tuple, set etc.
-                </p>
-                <code>
-                    fruits = ["apple", "banana", "cherry"] <br>
-                    for x in fruits: <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print(x)
-                </code>
-                <h2>The range() Function</h2>
-                <p>
-                    To loop through a set of code a specified number of times, 
-                    we can use the <span class="highlight"> range()</span> function.
-                </p>
-                <p>
-                    The <span class="highlight"> range()</span> function returns a sequence of numbers, 
-                    starting from 0 by default, and increments by 1 
-                    (by default), and ends at a specified number.
-                </p>
-                <code>
-                    for x in range(6): <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print(x)
-                </code>
-            </section>
-            <section class="main-section" id="Functions">
-                <header>Functions</header>
-                <p>
-                    A <span class="highlight">function</span> is a block of code
-                    which only runs when it is called.
-                </p>
-                <p>
-                    You can pass data, known as parameters, into a <span class="highlight"> function</span>.
-                </p>
-                <p>
-                    A <span class="highlight"> function</span> can return data as a result.
-                </p>
-                <h2>Creating a Function</h2>
-                <p>
-                    In Python a fuinction is defined using the 
-                    <span class="highlight">def </span>keyword.
-                </p>
-                <code>
-                    def my_function(): <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;print("Hello from a function")
-                </code>
-            </section>
-        </main>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
